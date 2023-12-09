@@ -22,7 +22,13 @@ gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 thresh = cv2.threshold(gray, 0, 255,
                        cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
 
-cv2.imshow("thresh", thresh)
+
+#Resize image to fit in the laptop windows
+cv2.namedWindow("output", cv2.WINDOW_NORMAL)
+threshResized = cv2.resize(thresh, (540, 960)) 
+
+#Show processed image
+cv2.imshow("thresh", threshResized)
 
 # use Tesseract to OCR the image
 text = pytesseract.image_to_string(thresh)
