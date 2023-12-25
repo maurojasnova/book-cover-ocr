@@ -4,6 +4,6 @@
 
 Run python in the terminal with the next command:
 
-`python ocr.py --image test3.pg`
+`python3 ocr.py --image test3.pg`
 
 Where "test3.png" corresponds to the book cover you would like to OCR.
